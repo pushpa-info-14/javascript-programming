@@ -5,11 +5,11 @@
 let numbers = [1, 2, 3, 4, 5, 6, 7];
 
 function isEven(element) {
-    return element % 2 == 0;
+    return element % 2 === 0;
 }
 
 function isOdd(element) {
-    return element % 2 == 1;
+    return element % 2 === 1;
 }
 
 console.log(numbers);
