@@ -16,8 +16,7 @@ function playGame(playerChoice) {
     } else {
         switch (playerChoice) {
             case "rock":
-                result =
-                    computerChoice === "scissors" ? "You win!" : "You lose!";
+                result = computerChoice === "scissors" ? "You win!" : "You lose!";
                 break;
             case "paper":
                 result = computerChoice === "rock" ? "You win!" : "You lose!";
