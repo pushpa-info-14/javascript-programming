@@ -1,6 +1,8 @@
 const fib = (n) => {
   const table = Array(n + 1).fill(0);
 
+  console.log(table);
+
   table[1] = 1;
 
   // for (let i = 2; i <= n; i++) {
