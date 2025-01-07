@@ -18,7 +18,6 @@ var addBinary = function (a, b) {
     i--;
     j--;
   }
-
   return result;
 };
 
