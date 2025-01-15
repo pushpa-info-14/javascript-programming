@@ -4,20 +4,21 @@
  * @return {number[]}
  */
 var findThePrefixCommonArray = function (A, B) {
-  const count = Array(A.length).fill(0);
+  const frequency = Array(A.length + 1).fill(0);
   const resultCount = [];
 
+  let count = 0;
   for (let i = 0; i < A.length; i++) {
-    count[A[i] - 1] += 1;
-    count[B[i] - 1] += 1;
-
-    let result = 0;
-    for (let j = 0; j <= i; j++) {
-      if (count[A[j] - 1] === 2) {
-        result++;
-      }
+    frequency[A[i]] += 1;
+    if (frequency[A[i]] === 2) {
+      count += 1;
     }
-    resultCount.push(result);
+
+    frequency[B[i]] += 1;
+    if (frequency[B[i]] === 2) {
+      count += 1;
+    }
+    resultCount.push(count);
   }
 
   return resultCount;
