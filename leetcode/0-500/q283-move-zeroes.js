@@ -4,14 +4,11 @@
  */
 var moveZeroes = function (nums) {
   let l = 0;
-  while (nums[l] !== 0 && l < nums.length) {
-    l++;
-  }
-
-  for (let r = l + 1; r < nums.length; r++) {
+  for (let r = 0; r < nums.length; r++) {
     if (nums[r] !== 0) {
+      let temp = nums[l];
       nums[l] = nums[r];
-      nums[r] = 0;
+      nums[r] = temp;
       l++;
     }
   }
